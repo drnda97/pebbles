@@ -1,0 +1,91 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f5;
+}
+.clearfix::after{
+  content: '';
+  height: 1px;
+  display: block;
+  clear: both;
+}
+/* ----------------------------navbar-------------------------------------- */
+.nav-wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+nav{
+  display: block;
+  width: 100%;
+  font-family: 'Noto Serif', serif;
+  border-bottom: 1px solid #bad6db;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+}
+.logo img{
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+}
+nav ul{
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+nav ul li{
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin: 0 25px;
+  color: #051f34;
+}
+nav ul li a{
+  display: block;
+  float: none;
+  text-decoration: none;
+  color: #051f34;
+}
+/* ----------------------------startpage-------------------------------------- */
+.start-images{
+  width:
+}
+.start-images img{
+  display: block;
+  float: left;
+  width: 49%;
+  height: 350px;
+  margin: 5px;
+  border: 1px solid lightgrey;
+}
+.parallax{
+  background-image: url('../../pebbles/3.jpg');
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.menu-btn{
+  display: block;
+  float: none;
+  text-decoration: none;
+  text-align: center;
+  color: #f4f5f5;
+  background-color: #051f34;
+  width: 100px;
+  padding: 10px 35px;
+  margin: 150px auto;
+  font-family: 'Noto Serif', serif;
+}
+.menu-btn:hover{
+  font-weight: bolder;
+}
+.parallax h1{
+  color: #f4f5f5;
+  text-align: center;
+  font-size: 150px;
+}
