@@ -18,9 +18,9 @@ class Router
     if (file_exists('./controller/'.$controller_name.'.php')) {
       $this->controller = $controller_name;
       unset($this->get_url[0]);
-      require_once('./controller/' . $this->controller .'.php');
-      $this->controller = new $this->controller;
     }
+    require_once('./controller/' . $this->controller .'.php');
+    $this->controller = new $this->controller;
     if (isset($this->get_url[1])) {
       if (method_exists($this->controller, $this->get_url[1])) {
         $this->method = $this->get_url[1];

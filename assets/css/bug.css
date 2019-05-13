@@ -1,0 +1,201 @@
+.clearfix::after{
+  display: block;
+  height: 1px;
+  content: '';
+  clear: both;
+  visibility: hidden;
+}
+html,
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f5;
+}
+
+/* ======================navbar========================================== */
+.nav-wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+nav{
+  display: block;
+  width: 100%;
+  font-family: 'Noto Serif', serif;
+  border-bottom: 1px solid #bad6db;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+}
+.logo img{
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+}
+nav ul{
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+nav ul li{
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin: 0 25px;
+  color: #051f34;
+}
+nav ul li a{
+  display: block;
+  float: none;
+  text-decoration: none;
+  color: #051f34;
+}
+/* ======================starpage========================================== */
+.start-images{
+  width:
+}
+.start-images div{
+  display: block;
+  float: left;
+  width: 49%;
+  height: 300px;
+  margin: 5px;
+  border: 1px solid lightgrey;
+}
+.start-images div img{
+  display: block;
+  float: inherit;
+  width: 100%;
+  height: 100%;
+}
+.parallax{
+  background-image: url('../../pebbles/3.jpg');
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.menu-btn{
+  display: block;
+  float: none;
+  text-decoration: none;
+  text-align: center;
+  color: #f4f5f5;
+  background-color: #051f34;
+  width: 100px;
+  padding: 10px 35px;
+  margin: 150px auto;
+  font-family: 'Noto Serif', serif;
+}
+.menu-btn:hover{
+  font-weight: bolder;
+}
+.parallax h1{
+  color: #f4f5f5;
+  text-align: center;
+  font-size: 150px;
+}
+/* ======================menu========================================== */
+h1{
+  font-family: 'Noto Serif', serif;
+  color: #051f34;
+  font-size: 100px;
+  text-align: center;
+  margin: 0px;
+}
+.menu{
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+.menu ul{
+  list-style: none;
+  padding: 0;
+  font-family: 'Noto Serif', serif;
+}
+.menu ul li{
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 10px;
+  height: 45px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #f4f5f5;
+  display: block;
+  padding: 0 15px;
+  line-height: 2;
+  background-color: #051f34;
+}
+/* .sub_list{
+  display: none;
+  width: 10%;
+ }
+.sub_list li{
+  display: block;
+  float: none;
+  width: 100%;
+} */
+/* ======================Location========================================== */
+.location{
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+}
+.location a{
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+  color: #027495;
+}
+.location h2{
+  font-size: 32px;
+  color: #051f34;
+}
+.location h3{
+  color: #051f34;
+}
+.location p{
+  color: #051f34;
+}
+/* ======================Contact========================================== */
+.contact{
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  margin-bottom: 30px;
+}
+.contact h2{
+  font-size: 32px;
+}
+.contact p {
+  font-size: 14px !important;
+  margin: 25px;
+}
+.contact input{
+  display: block;
+  width: 40%;
+  height: 32px;
+  margin: 10px auto;
+  padding: 5px;
+}
+ .contact button{
+   border: 0;
+   margin: 15px auto !important;
+   cursor: pointer;
+}
+/* ======================footer========================================== */
+footer{
+  display: block;
+  background-color: #051f34;
+}
+footer a{
+  display: block;
+  float: left;
+  width: 100px;
+}
+footer a img{
+  width: 100%;
+}

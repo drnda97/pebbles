@@ -1,0 +1,18 @@
+-- create table type_in_menu(
+-- 	id int auto_increment primary key,
+-- 	type varchar(50),
+-- 	id_product int
+-- );
+-- create table products(
+-- 	id int auto_increment primary key,
+-- 	product varchar(50) not null,
+-- 	description mediumtext,
+--   price decimal(5,2) not null
+-- );
+-- create table sub_types(
+-- 	id int auto_increment primary key,
+-- 	sub_type varchar(50) not null
+-- );
+-- ALTER TABLE type_in_menu
+-- ADD CONSTRAINT product
+-- FOREIGN KEY (id_product) REFERENCES products(id);

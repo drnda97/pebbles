@@ -53,13 +53,19 @@ nav ul li a{
 .start-images{
   width:
 }
-.start-images img{
+.start-images div{
   display: block;
   float: left;
   width: 49%;
-  height: 350px;
+  height: 300px;
   margin: 5px;
   border: 1px solid lightgrey;
+}
+.start-images div img{
+  display: block;
+  float: inherit;
+  width: 100%;
+  height: 100%;
 }
 .parallax{
   background-image: url('../../pebbles/3.jpg');
