@@ -22,15 +22,30 @@ nav{
   width: 100%;
   font-family: 'Noto Serif', serif;
   border-bottom: 1px solid #bad6db;
+  background-color: #f4f5f5;
+  transition: all .2s linear;
 }
+/* .background{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-image: url('../../pebbles/8.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: blur(2px);
+  width: 100%;
+  height: 266px;
+}  */
 .logo{
+  transition: all .2s linear;
   display: block;
   margin: 0 auto;
 }
 .logo img{
-  display: block;
-  margin: 0 auto;
-  width: 220px;
+  transition: all .2s linear;
+  margin: 0 40%;
+  width: 250px;
 }
 nav ul{
   list-style: none;
@@ -52,6 +67,12 @@ nav ul li a{
   text-decoration: none;
   color: #051f34;
 }
+.strech{
+  content: '';
+  display: block;
+  height: 100px;
+  clear: both;
+}
 /* ======================starpage========================================== */
 .start-images{
   width:
@@ -60,7 +81,7 @@ nav ul li a{
   display: block;
   float: left;
   width: 49%;
-  height: 300px;
+  height: 400px;
   margin: 5px;
   border: 1px solid lightgrey;
 }
@@ -131,7 +152,7 @@ h1{
   line-height: 2;
   background-color: #051f34;
 }
-/* .sub_list{
+.sub_list{
   display: none;
   width: 10%;
  }
@@ -139,7 +160,14 @@ h1{
   display: block;
   float: none;
   width: 100%;
-} */
+}
+.ul_sub_ul li{
+  color: #f4f5f5;
+  display: block;
+  padding: 0 15px;
+  background-color: #051f34;
+  height: 30px !important;
+}
 /* ======================Location========================================== */
 .location{
   text-align: center;
@@ -161,6 +189,42 @@ h1{
 .location p{
   color: #051f34;
 }
+.slider_container{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.slider_container button{
+  border: 0;
+  background-color: transparent;
+  height: 100px;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: #f4f5f5;
+  font-size: 32px;
+}
+.slider_container button:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slider_container img{
+  display: block;
+  margin-top: -400px;
+  width: 100%;
+  height: auto;
+}
+.previous{
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+.next{
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+
 /* ======================Contact========================================== */
 .contact{
   text-align: center;
@@ -168,11 +232,11 @@ h1{
   margin-bottom: 30px;
 }
 .contact h2{
-  font-size: 32px;
+  font-size: 48px;
 }
 .contact p {
   font-size: 14px !important;
-  margin: 25px;
+  margin: 50px auto;
 }
 .contact input{
   display: block;
@@ -181,7 +245,7 @@ h1{
   margin: 10px auto;
   padding: 5px;
 }
- .contact button{
+.contact button{
    border: 0;
    margin: 15px auto !important;
    cursor: pointer;
@@ -194,7 +258,8 @@ footer{
 footer a{
   display: block;
   float: left;
-  width: 100px;
+  width: 30px;
+  margin: 5px;
 }
 footer a img{
   width: 100%;
