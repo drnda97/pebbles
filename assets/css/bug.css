@@ -24,6 +24,7 @@ nav{
   border-bottom: 1px solid #bad6db;
   background-color: #f4f5f5;
   transition: all .2s linear;
+  z-index: 999;
 }
 /* .background{
   position: fixed;
@@ -168,6 +169,23 @@ h1{
   background-color: #051f34;
   height: 30px !important;
 }
+.card{
+  width: 450px;
+  margin: 0 auto;
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  outline: 1px solid #bad6db;
+  overflow: hidden;
+  position: relative;
+}
+.card img{
+  transition: all .2s linear;
+
+}
+.card span{
+  font-size: 32px;
+  display: none;
+}
 /* ======================Location========================================== */
 .location{
   text-align: center;
@@ -194,6 +212,7 @@ h1{
   height: 400px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 .slider_container button{
   border: 0;
