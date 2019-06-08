@@ -18,4 +18,8 @@ class UserController
     {
       View::load('user', 'contact');
     }
+    public function newsFeed()
+    {
+      View::load('user', 'news_feed');
+    }
 }

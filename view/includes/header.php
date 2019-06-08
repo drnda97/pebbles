@@ -3,14 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Pebbles</title>
-    <?php //if (isset($_GET['url']) === 'user/menu'): ?>
-      <?php //var_dump(isset($_GET['url'])); ?>
-    <?php //elseif(isset($_GET['url']) === 'user/location') : ?>
-      <script type="text/javascript" src="../js/location.js"></script>
-      <script type="text/javascript" src="../js/menu.js"></script>
-    <?php //endif; ?>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"> -->
+    <script type="text/javascript" src="../js/main.js"></script></script>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/bug.css">
   </head>

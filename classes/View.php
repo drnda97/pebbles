@@ -9,4 +9,13 @@ class View
     require_once('./view/'.$folder.'/'.$file.'.php');
     require_once('./view/includes/footer.php');
   }
+  public static function  adminlogin($folder,$file)
+  {
+    require_once('./view/'.$folder.'/'.$file.'.php');
+  }
+  public static function  adminload($folder,$file)
+  {
+    require_once('./view/includes/admin/header.php');
+    require_once('./view/'.$folder.'/'.$file.'.php');
+  }
 }

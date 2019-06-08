@@ -4,6 +4,6 @@ class AdminController
 {
   public function startpage()
   {
-    View::load('admin', 'login');
+    View::adminlogin('admin', 'login');
   }
 }

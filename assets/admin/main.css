@@ -1,0 +1,30 @@
+html,
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.clearfix::after{
+  display: block;
+  clear: both;
+  height: 1px;
+  visibility: hidden;
+  content: '';
+}
+nav ul{
+  list-style: none;
+  padding: 0;
+}
+nav ul li{
+  display: block;
+  float: left;
+  width: 25%;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #051f34;
+}
+.middle{
+  width: 1200px;
+  margin: 0 auto;
+}

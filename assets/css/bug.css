@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Poller+One|Pacifico&display=swap');
 .clearfix::after{
   display: block;
   height: 1px;
@@ -20,24 +21,14 @@ body{
 nav{
   display: block;
   width: 100%;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
+  font-size: 16px;
   border-bottom: 1px solid #bad6db;
+  box-shadow: 0px 5px 5px grey;
   background-color: #f4f5f5;
-  transition: all .2s linear;
+  transition: all .5s linear;
   z-index: 999;
 }
-/* .background{
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 0;
-  background-image: url('../../pebbles/8.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  filter: blur(2px);
-  width: 100%;
-  height: 266px;
-}  */
 .logo{
   transition: all .2s linear;
   display: block;
@@ -46,7 +37,7 @@ nav{
 .logo img{
   transition: all .2s linear;
   margin: 0 40%;
-  width: 250px;
+  width: 220px;
 }
 nav ul{
   list-style: none;
@@ -56,7 +47,7 @@ nav ul{
   padding-bottom: 45px;
 }
 nav ul li{
-  width: 25%;
+  width: 17%;
   float: left;
   text-align: center;
   margin: 0 25px;
@@ -75,34 +66,54 @@ nav ul li a{
   clear: both;
 }
 /* ======================starpage========================================== */
-.start-images{
-  width:
-}
 .start-images div{
   display: block;
   float: left;
   width: 49%;
-  height: 400px;
+  height: 450px;
   margin: 5px;
   border: 1px solid lightgrey;
+  box-shadow: 5px 5px 5px lightgrey;
 }
+.start-images h2{
+  display: block;
+  text-align: center;
+  font-family: 'Poller One', sans-serif;
+  color: #051f34;
+  font-size: 32px;
+}
+/* .lazyload{
+  opacity: 0 !important;
+} */
 .start-images div img{
   display: block;
   float: inherit;
   width: 100%;
   height: 100%;
+  opacity: 1;
 }
 .parallax{
-  background-image: url('../../pebbles/3.jpg');
+  background-image:  url('../../pebbles/3.jpg');
   height: 600px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.parallax img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: 99;
 }
 .menu-btn{
-  display: block;
-  float: none;
+  position: absolute;
+  top: 30%;
+  left: 45%;
   text-decoration: none;
   text-align: center;
   color: #f4f5f5;
@@ -110,7 +121,8 @@ nav ul li a{
   width: 100px;
   padding: 10px 35px;
   margin: 150px auto;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
+  z-index: 999;
 }
 .menu-btn:hover{
   font-weight: bolder;
@@ -122,7 +134,7 @@ nav ul li a{
 }
 /* ======================menu========================================== */
 h1{
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
   color: #051f34;
   font-size: 100px;
   text-align: center;
@@ -132,47 +144,65 @@ h1{
   display: block;
   width: 70%;
   margin: 0 auto;
+  position: relative;
+}
+.menu img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
 }
 .menu ul{
+  color: #f4f5f5;
   list-style: none;
   padding: 0;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Pacifico', cursive; */
+  width: 100%;
 }
 .menu ul li{
   display: block;
-  float: left;
-  text-align: center;
+  text-align: left;
   margin: 10px;
-  height: 45px;
+  width: 100%;
 }
 .menu ul li a{
   text-decoration: none;
-  color: #f4f5f5;
-  display: block;
   padding: 0 15px;
   line-height: 2;
-  background-color: #051f34;
+  font-size: 26px;
+  color: #051f34 !important;
 }
 .sub_list{
-  display: none;
-  width: 10%;
+  font-family: 'Pacifico', cursive !important;
+  padding-left: 25px !important;
+  width: 100%;
+ }
+ .sub_sub_list{
+   font-family: 'Dancing Script', cursive !important;
+   padding-left: 25px !important;
+   color: #051f34 !important;
+   font-size: 24px;
+   width: 100%;
  }
 .sub_list li{
   display: block;
-  float: none;
   width: 100%;
 }
 .ul_sub_ul li{
-  color: #f4f5f5;
+  color: #f4f5f5 !important;
   display: block;
   padding: 0 15px;
-  background-color: #051f34;
-  height: 30px !important;
 }
-.card{
+.menu ul div{
+  display: none;
+}
+.active{
+  display: block;
+}
+/* .card{
   width: 450px;
   margin: 0 auto;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
   text-align: center;
   outline: 1px solid #bad6db;
   overflow: hidden;
@@ -185,11 +215,12 @@ h1{
 .card span{
   font-size: 32px;
   display: none;
-}
+} */
+
 /* ======================Location========================================== */
 .location{
   text-align: center;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
 }
 .location a{
   display: block;
@@ -243,19 +274,23 @@ h1{
   top: 150px;
   right: 0;
 }
-
+.mapouter{
+  margin: 0 auto;
+}
 /* ======================Contact========================================== */
 .contact{
   text-align: center;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
   margin-bottom: 30px;
 }
 .contact h2{
   font-size: 48px;
+  color: #051f34;
 }
 .contact p {
   font-size: 14px !important;
-  margin: 50px auto;
+  margin: 30px auto;
+  color: #051f34;
 }
 .contact input{
   display: block;
@@ -265,9 +300,51 @@ h1{
   padding: 5px;
 }
 .contact button{
-   border: 0;
-   margin: 15px auto !important;
-   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: #f4f5f5;
+  background-color: #051f34;
+  width: 100px;
+  padding: 10px 35px;
+  margin: 150px auto;
+  font-family: 'Poller One', serif;
+
+  border: 0;
+  margin: 15px auto !important;
+  cursor: pointer;
+}
+/* ======================news========================================== */
+.news-cover{
+  display: block;
+  width: 100%;
+  box-shadow: 0 5px 5px silver;
+}
+.news-wrapper{
+  background-color: #bad6db;
+  padding-bottom: 15px;
+}
+.main{
+  display: block;
+  width: 1200px;
+  margin: 15px auto;
+  text-align: center;
+}
+.card{
+  display: block;
+  width: 50%;
+  margin: 15px auto;
+  outline: 1px solid silver;
+  background-color: #f4f5f5;
+  text-align: center;
+}
+.card img{
+  width: 100%;
+}
+.card p{
+  font-family: 'Poller One', sans-serif;
+  color: #051f34;
+  margin-bottom: 0;
+  font-size: 20px;
 }
 /* ======================footer========================================== */
 footer{

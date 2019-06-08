@@ -11,5 +11,6 @@
     <li><a href="http://localhost/igorjanosevic/pebbles/user/location">Hours & Location</a></li>
     <li><a href="http://localhost/igorjanosevic/pebbles/user/menu">Menu</a></li>
     <li><a href="http://localhost/igorjanosevic/pebbles/user/contact">Contact</a></li>
+    <li><a href="http://localhost/igorjanosevic/pebbles/user/newsFeed">News Feed</a></li>
   </ul>
 </nav>
