@@ -8,6 +8,8 @@ class UserController
     }
     public function menu()
     {
+      $product = new Product();
+      var_dump($product->getProducts());
       View::load('user', 'menu');
     }
     public function location()

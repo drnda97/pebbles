@@ -12,7 +12,12 @@
 -- create table sub_types(
 -- 	id int auto_increment primary key,
 -- 	sub_type varchar(50) not null
--- );
--- ALTER TABLE type_in_menu
+-- -- );
+-- ALTER TABLE menu_list
 -- ADD CONSTRAINT product
 -- FOREIGN KEY (id_product) REFERENCES products(id);
+-- create table sub_list(
+-- 	id int auto_increment primary key,
+-- 	id_menu_item decimal(5,2) not null,
+-- 	sub_item varchar(100) not null
+-- );

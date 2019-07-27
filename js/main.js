@@ -3,12 +3,12 @@ window.addEventListener('scroll', (e) => {
   var img_pos = document.querySelector('#img_pos');
   var logo = document.querySelector('.logo');
   var ul_nav = document.querySelector('.nav_ul');
-  if(window.scrollY === 100){
-    document.body.style.marginTop = '100px';
-  }
-  if(window.scrollY < 100){
-    document.body.style.marginTop = '0';
-  }
+  // if(window.scrollY === 100){
+  //   document.body.style.marginTop = '100px';
+  // }
+  // if(window.scrollY < 100){
+  //   document.body.style.marginTop = '0';
+  // }
   if(window.scrollY > 0){
     navbar.style.position = 'fixed';
     navbar.style.top = '0';

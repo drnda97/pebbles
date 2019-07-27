@@ -1,22 +1,22 @@
 <?php if (!isset($_GET['url'])): ?>
   <div class="start-images clearfix">
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/2.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/2.jpg" alt="start-page">
     </div>
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/3.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/3.jpg" alt="start-page">
     </div>
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/4.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/4.jpg" alt="start-page">
     </div>
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/5.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/5.jpg" alt="start-page">
     </div>
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/6.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/6.jpg" alt="start-page">
     </div>
     <div class="clearfix">
-      <img class="lazyload" src="./pebbles/7.jpg" alt="start-page">
+      <img class="lazyload" src="../pebbles/7.jpg" alt="start-page">
     </div>
   </div>
 <?php else : ?>

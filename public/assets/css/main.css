@@ -1,50 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cookie|Dancing+Script|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Poller+One|Pacifico&display=swap');
+.clearfix::after{
+  display: block;
+  height: 1px;
+  content: '';
+  clear: both;
+  visibility: hidden;
+}
+html,
 body{
   margin: 0;
   padding: 0;
   background-color: #f4f5f5;
 }
-.clearfix::after{
-  content: '';
-  height: 1px;
-  display: block;
-  clear: both;
-}
-/* ----------------------------navbar-------------------------------------- */
+
+/* ======================navbar========================================== */
 .nav-wrapper{
   width: 1200px;
   margin: 0 auto;
-  position: fixed;
-  left: 150px;
-  top: 0;
-  z-index: 999;
 }
 nav{
   display: block;
   width: 100%;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
+  font-size: 16px;
   border-bottom: 1px solid #bad6db;
-  height: 266px;
-}
-.background{
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 0;
-  background-image: url('../../pebbles/8.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  filter: blur(2px);
-  width: 100%;
-  height: 266px;
+  box-shadow: 0px 5px 5px grey;
+  background-color: #f4f5f5;
+  transition: all .5s linear;
+  z-index: 999;
 }
 .logo{
+  transition: all .2s linear;
   display: block;
   margin: 0 auto;
 }
 .logo img{
-  display: block;
-  margin: 0 auto;
+  transition: all .2s linear;
+  margin: 0 40%;
   width: 220px;
 }
 nav ul{
@@ -55,7 +47,7 @@ nav ul{
   padding-bottom: 45px;
 }
 nav ul li{
-  width: 25%;
+  width: 17%;
   float: left;
   text-align: center;
   margin: 0 25px;
@@ -67,35 +59,61 @@ nav ul li a{
   text-decoration: none;
   color: #051f34;
 }
-/* ----------------------------startpage-------------------------------------- */
-.start-images{
-  width:
+.strech{
+  content: '';
+  display: block;
+  height: 100px;
+  clear: both;
 }
+/* ======================starpage========================================== */
 .start-images div{
   display: block;
   float: left;
   width: 49%;
-  height: 400px;
+  height: 450px;
   margin: 5px;
   border: 1px solid lightgrey;
+  box-shadow: 5px 5px 5px lightgrey;
 }
+.start-images h2{
+  display: block;
+  text-align: center;
+  font-family: 'Poller One', sans-serif;
+  color: #051f34;
+  font-size: 32px;
+}
+/* .lazyload{
+  opacity: 0 !important;
+} */
 .start-images div img{
   display: block;
   float: inherit;
   width: 100%;
   height: 100%;
+  opacity: 1;
 }
 .parallax{
-  background-image: url('../../pebbles/3.jpg');
+  background-image:  url('../../../pebbles/3.jpg');
   height: 600px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.parallax img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: 99;
 }
 .menu-btn{
-  display: block;
-  float: none;
+  position: absolute;
+  top: 30%;
+  left: 45%;
   text-decoration: none;
   text-align: center;
   color: #f4f5f5;
@@ -103,7 +121,8 @@ nav ul li a{
   width: 100px;
   padding: 10px 35px;
   margin: 150px auto;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Poller One', serif;
+  z-index: 999;
 }
 .menu-btn:hover{
   font-weight: bolder;
@@ -113,7 +132,7 @@ nav ul li a{
   text-align: center;
   font-size: 150px;
 }
-/* ----------------------------footer-------------------------------------- */
+/* ======================footer========================================== */
 footer{
   display: block;
   background-color: #051f34;
