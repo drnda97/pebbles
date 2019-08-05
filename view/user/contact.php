@@ -1,4 +1,4 @@
-<div class="strech" id="strech"></div>
+<!-- <div class="strech" id="strech"></div> -->
 <div class="contact">
   <h2 class="contact_h2">Contact us</h2>
   <p>Send us a message and we’ll get back to you as soon as possible.</p>
@@ -20,3 +20,4 @@
     <button type="button" name="submit">Send</button>
   </form>
 </div>
+<script type="text/javascript" src="../js/contact.js"></script>

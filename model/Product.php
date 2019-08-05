@@ -18,4 +18,15 @@ class Product
     }
     return $products;
   }
+  public function getMenu()
+  {
+    global $conn;
+    $query = 'select item_in_menu from item_in_menu';
+    $res = $conn->query($query);
+    $items = array();
+    while($item = $res->fetch_assoc()){
+      $items[] = $item;
+    }
+    return $items;
+  }
 }

@@ -6,7 +6,7 @@
 		margin-top: 150px;
 	}
 	</style>
-	<form method="POST" action="http://localhost/igorjanosevic/pebbles/admin/checkadminlogin">
+	<form method="POST" action="http://localhost/pebbles/admin/checkadminlogin">
 		<?php //if (isset($_GET['err'])) : ?>
 			<div class="err">
 				<?php //foreach($_GET['err'] as $err) : ?>

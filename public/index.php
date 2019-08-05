@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 foreach (glob('../classes/*') as $class_name) {
 	require_once($class_name);
 }

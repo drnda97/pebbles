@@ -9,7 +9,8 @@ class UserController
     public function menu()
     {
       $product = new Product();
-      var_dump($product->getProducts());
+      $_SESSION['products'] = $product->getProducts();
+      $_SESSION['items'] = $product->getMenu();
       View::load('user', 'menu');
     }
     public function location()

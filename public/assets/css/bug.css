@@ -12,7 +12,6 @@ body{
   padding: 0;
   background-color: #f4f5f5;
 }
-
 /* ======================navbar========================================== */
 .nav-wrapper{
   width: 1200px;
@@ -82,9 +81,6 @@ nav ul li a{
   color: #051f34;
   font-size: 32px;
 }
-/* .lazyload{
-  opacity: 0 !important;
-} */
 .start-images div img{
   display: block;
   float: inherit;
@@ -146,17 +142,31 @@ h1{
   margin: 0 auto;
   position: relative;
 }
-.menu img{
+.first_img{
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   right: 0;
-  width: 500px;
+  width: 200px;
+  transform: rotate(-28deg);
+}
+.second_img{
+  position: absolute;
+  bottom: 550px;
+  right: 0;
+  width: 200px;
+}
+.third_img{
+  position: absolute;
+  bottom: 1000px;
+  right: 0;
+  width: 200px;
+  transform: rotate(-28deg);
 }
 .menu ul{
   color: #f4f5f5;
   list-style: none;
   padding: 0;
-  font-family: 'Pacifico', cursive; */
+  font-family: 'Pacifico', cursive;
   width: 100%;
 }
 .menu ul li{
@@ -172,17 +182,19 @@ h1{
   font-size: 26px;
   color: #051f34 !important;
 }
-.sub_list{
-  font-family: 'Pacifico', cursive !important;
-  padding-left: 25px !important;
-  width: 100%;
- }
  .sub_sub_list{
    font-family: 'Dancing Script', cursive !important;
    padding-left: 25px !important;
    color: #051f34 !important;
-   font-size: 24px;
+   font-size: 28px !important;
    width: 100%;
+ }
+ .sub_sub_list small{
+   display: block;
+   font-size: 20px !important;
+   padding-left: 25px !important;
+   color: #051f34;
+   width: 70%;
  }
 .sub_list li{
   display: block;
@@ -199,23 +211,6 @@ h1{
 .active{
   display: block;
 }
-/* .card{
-  width: 450px;
-  margin: 0 auto;
-  font-family: 'Poller One', serif;
-  text-align: center;
-  outline: 1px solid #bad6db;
-  overflow: hidden;
-  position: relative;
-}
-.card img{
-  transition: all .2s linear;
-
-}
-.card span{
-  font-size: 32px;
-  display: none;
-} */
 
 /* ======================Location========================================== */
 .location{

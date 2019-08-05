@@ -1,4 +1,5 @@
-<script type="text/javascript" src="../js/menu.js"></script>
+<?php $products = $_SESSION['products']; ?>
+<?php $items = $_SESSION['items']; ?>
 <div class="slider_container">
   <img name="slider" alt="prva slika slajda">
   <button type="button" name="next" class="next">&#10095;</button>
@@ -7,51 +8,25 @@
 <h1>Menu</h1>
 <div class="menu">
   <ul>
-    <li><a class="dropdown" href="#Ciders">Ciders</a></li>
-    <div id="ciders">
-      <ul class="sub_sub_list">
-        <li>Strongbow (33cl)</li>
-        <li>Bulmers original (50cl)</li>
-        <li>Bulmers Pear (50cl)</li>
-        <li>Bulmers Crushed Red Berries and Lime (50cl)</li>
-        <li>Woodpecker (27.5cl)</li>
-      </ul>
-    </div>
-    <li><a class="dropdown" href="#HotBeverages">Hot Beverages</a></li>
-    <li><a class="dropdown" href="#IceCreamsandSorbets">Ice Creams and Sorbets</a></li>
-    <li><a class="dropdown" href="#IceCreamsandSorbets">Cocktails</a></li>
-    <li><a class="dropdown" href="#PremiumCocktails">Premium Cocktails</a></li>
-    <li><a class="dropdown" href="#Cockails">Cocktails</a></li>
-    <li><a class="dropdown" href="#Mocktails">Mocktails</a></li>
-    <li><a class="dropdown" href="#Milkshakes">Milkshakes</a></li>
-    <li><a class="dropdown" href="#FrozenSlushies">Frozen Slushies</a></li>
-    <li><a class="dropdown" href="#IcedCoffe">Iced Coffe</a></li>
-    <li><a class="dropdown" href="#SpritzersandAperitifs">Spritzers and Aperitifs</a></li>
-    <li><a class="dropdown" href="#beers">Beers</a></li>
-      <div id="beers">
-        <ul class="sub_list">
-          <li><a class="dropdown" href="#LocalBeer">Local Beer</a></li>
-          <li><a class="dropdown" href="#">Foreign Beer</a></li>
-          <li><a class="dropdown" href="#">Speciality Beer</a></li>
-        </ul>
+    <?php foreach ($items as $item): ?>
+      <li>
+        <a class="dropdown" href="#<?php echo $item['item_in_menu']; ?>"><?php echo $item['item_in_menu']; ?></a>
+      </li>
+      <div id="<?php echo lcfirst($item['item_in_menu']); ?>">
+        <?php foreach ($products as $product): ?>
+          <?php $amount =  isset($product['amount']) ? ' (' . $product['amount'] . ')' : ''; ?>
+          <?php if ($product['item_in_menu'] == $item['item_in_menu']): ?>
+              <ul class="sub_sub_list">
+                <li><?php echo $product['product'] .  $amount ; ?></li>
+                <small><?php echo $product['description']; ?></small>
+              </ul>
+          <?php endif; ?>
+        <?php endforeach; ?>
       </div>
-    <li><a class="dropdown" href="#food">Food</a></li>
-      <div id="food">
-        <ul class="sub_list">
-          <li><a class="dropdown" href="#Fruit">Fruit</a></li>
-          <li><a class="dropdown" href="#Snacks">Snacks</a></li>
-          <li><a class="dropdown" href="#Salads">Salads</a></li>
-        </ul>
-      </div>
-      <li><a class="dropdown" href="#wines">Wines</a></li>
-        <div id="wines">
-          <ul class="sub_list">
-            <li><a class="dropdown" href="#LocalWhiteWines">Local White Wines</a></li>
-            <li><a class="dropdown" href="#ForeignWhiteWines">Foreign White Wines</a></li>
-            <li><a class="dropdown" href="#ForeignRedWines">Foreign Red Wines</a></li>
-            <li><a class="dropdown" href="#WinesbytheGlass">Wines by the Glass</a></li>
-          </ul>
-        </div>
+    <?php endforeach; ?>
   </ul>
-  <img src="../pebbles/Coconut-Tree.png" alt="coconut tree">
+  <img src="../pebbles/cocktail.webp" alt="coconut tree" class="first_img">
+  <img src="../pebbles/wine.png" alt="wine-glas-img" class="second_img">
+  <img src="../pebbles/ice-cream.png" alt="wine-glas-img" class="third_img">
 </div>
+<script type="text/javascript" src="../js/menu.js"></script>
