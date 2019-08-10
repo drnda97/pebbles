@@ -1,5 +1,6 @@
 <?php $products = $_SESSION['products']; ?>
 <?php $items = $_SESSION['items']; ?>
+<?php $images = $_SESSION['images']; ?>
 <div class="slider_container">
   <img name="slider" alt="prva slika slajda">
   <button type="button" name="next" class="next">&#10095;</button>
@@ -25,8 +26,8 @@
       </div>
     <?php endforeach; ?>
   </ul>
-  <img src="../pebbles/cocktail.webp" alt="coconut tree" class="first_img">
-  <img src="../pebbles/wine.png" alt="wine-glas-img" class="second_img">
-  <img src="../pebbles/ice-cream.png" alt="wine-glas-img" class="third_img">
+  <img src="<?php echo $images[0]['img_url']; ?>" alt="coconut tree" class="first_img">
+  <img src="<?php echo $images[1]['img_url']; ?>" alt="wine-glas-img" class="second_img">
+  <img src="<?php echo $images[2]['img_url']; ?>" alt="wine-glas-img" class="third_img">
 </div>
 <script type="text/javascript" src="../js/menu.js"></script>

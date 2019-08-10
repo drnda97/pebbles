@@ -5,7 +5,7 @@ class Product
   public function getProducts()
   {
     global $conn;
-    $query = 'select products.product, products.description, products.price, products.amount, item_in_menu.item_in_menu ';
+    $query = 'select products.id, products.product, products.description, products.price, products.amount, item_in_menu.item_in_menu ';
     $query .= 'from products ';
     $query .= 'join menu_list ';
     $query .= 'on products.id = menu_list.id_product ';
@@ -21,7 +21,7 @@ class Product
   public function getMenu()
   {
     global $conn;
-    $query = 'select item_in_menu from item_in_menu';
+    $query = 'select * from item_in_menu';
     $res = $conn->query($query);
     $items = array();
     while($item = $res->fetch_assoc()){

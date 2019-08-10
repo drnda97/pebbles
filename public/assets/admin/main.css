@@ -30,3 +30,28 @@ nav ul li a{
   width: 1200px;
   margin: 0 auto;
 }
+table{
+  width: 100%;
+}
+.secret{
+  display: none;
+}
+/* ==================================updateproduct===================================================== */
+.form-controll label{
+  display: block;
+  margin: 10px auto;
+}
+.form-controll input{
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 25px;
+  text-align: center;
+}
+.form-controll small{
+  color: red;
+}
+form input[name="button"]{
+  display: block;
+  margin: 25px auto !important;
+}

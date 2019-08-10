@@ -4,13 +4,17 @@ class UserController
 {
     public function startpage()
     {
+      $images = new Image();
+      $_SESSION['images'] = $images->getImageStartPage();
       View::load('user', 'startpage');
     }
     public function menu()
     {
       $product = new Product();
+      $images = new Image();
       $_SESSION['products'] = $product->getProducts();
       $_SESSION['items'] = $product->getMenu();
+      $_SESSION['images'] = $images->getImageMenu();
       View::load('user', 'menu');
     }
     public function location()

@@ -2,7 +2,7 @@
 
 class View
 {
-  public $data = array();
+  public static $data = array();
   public static function load($folder,$file)
   {
     require_once('../view/includes/header.php');
