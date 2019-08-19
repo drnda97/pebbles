@@ -12,13 +12,14 @@ function checkInputBtn(form, inputs, submit){
       }
     });
   });
-  
-  submit.addEventListener('click', () => {
-    if (err.length > 0) {
-      err.length = 1;
-      alert(err);
-    }else{
-      form.submit();
-    }
-  });
+  if(submit){
+    submit.addEventListener('click', () => {
+      if (err.length > 0) {
+        err.length = 1;
+        alert(err);
+      }else{
+        form.submit();
+      }
+    });
+  }
 }

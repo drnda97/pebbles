@@ -19,6 +19,8 @@ class UserController
     }
     public function location()
     {
+      $images = new Image();
+      $_SESSION['images'] = $images->getImageLocation();
       View::load('user', 'location');
     }
     public function contact()
@@ -27,6 +29,8 @@ class UserController
     }
     public function newsFeed()
     {
+      $user = new Event();
+      $_SESSION['events'] = $user->getEvent();
       View::load('user', 'news_feed');
     }
 }

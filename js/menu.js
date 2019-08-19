@@ -1,8 +1,7 @@
 window.addEventListener('scroll', () => {
   var strech = document.querySelector('.slider_container');
-  console.log(window.scrollY)
   if (window.scrollY <= 100) {
-    strech.style.marginTop = '230px';
+    strech.style.marginTop = '50px';
   }
   if (window.scrollY == 0) {
     strech.style.marginTop = '0px';
@@ -11,41 +10,17 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('load', () => {
   var dropdown = document.getElementsByClassName("dropdown");
-  showImg();
-  automaticSlider();
+  var  img = document.querySelector('.slider_container img');
+  var images = [];
+  var getSrc = document.querySelectorAll('.menu_slider');
+  getSrc.forEach(src => {
+    images.push(src.dataset.src);
+  });
+  showImg(img, images);
+  automaticSlider(img, images);
   dropDownMenu(dropdown);
 });
-function showImg(){
-  var i = 0;
-  var images = ['../pebbles/5.jpg', '../pebbles/6.jpg', '../pebbles/9.jpg', '../pebbles/10.jpg']
-  var  next_btn = document.querySelector('.next');
-  var  prev_btn = document.querySelector('.previous');
-  var  img = document.querySelector('.slider_container img');
-  next_btn.addEventListener('click', () => {
-    if (i < images.length -1) {
-      i += 1;
-      img.src = images[i];
-    }
-  });
-  prev_btn.addEventListener('click', () => {
-    if (i <= images.length && i > 0) {
-      i = i - 1;
-      img.src = images[i];
-    }
-  });
-  img.src = images[i];
-}
-function automaticSlider(){
-  var i = 0;
-  var images = ['../pebbles/5.jpg', '../pebbles/6.jpg', '../pebbles/9.jpg', '../pebbles/10.jpg']
-  var  img = document.querySelector('.slider_container img');
-  setInterval(() => {
-    if (i < images.length -1) {
-      i += 1;
-      img.src = images[i];
-    }
-  }, 5000)
-}
+
 function dropDownMenu(dropdown){
   var i;
 

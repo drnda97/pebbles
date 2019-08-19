@@ -13,7 +13,7 @@
   <h2>Come and pay us a visit we are expecting you!!!</h2>
 </div>
 <div class="parallax">
-  <img src="<?php echo $png_image; ?>" alt="" >
+  <img src="<?php echo $png_image; ?>" alt="">
   <h1>Menu</h1>
-  <a href="http://localhost/pebbles/user/menu" class="menu-btn">Menu</a>
+  <a href="<?php echo WEBROOT; ?>/user/menu" class="menu-btn">Menu</a>
 </div>

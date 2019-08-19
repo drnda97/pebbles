@@ -5,6 +5,11 @@
   <img name="slider" alt="prva slika slajda">
   <button type="button" name="next" class="next">&#10095;</button>
   <button type="button" name="previous" class="previous">&#10094;</button>
+  <?php foreach ($images as $image): ?>
+    <?php if (isset($image['id_nav_img'])): ?>
+      <img data-src="<?php echo $image['img_url']; ?>" class="menu_slider">
+    <?php endif; ?>
+  <?php endforeach; ?>
 </div>
 <h1>Menu</h1>
 <div class="menu">

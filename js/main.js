@@ -35,20 +35,30 @@ window.addEventListener('scroll', (e) => {
 });
 window.addEventListener('load', () => {
 });
-  // var images = document.getElementsByClassName('lazyload');
-  // const loadDistance = window.innerHeight + 100;
-  // console.log(loadDistance);
-//   function lazyLoad(images) {
-//     // images.forEach((item) => {
-//     Array.prototype.forEach.call(images, item => {
-//       if (item.getBoundingClientRect().top <= loadDistance) {
-//         item.classList.remove('lazyload');
-//         item.setAttribute('src', item.getAttribute('data-src'));
-//       }
-//     });
-//   }
-//   lazyLoad(images);
-// var debouncedLazy = _.debounce(lazyLoad, 200);
-// var throttleLazy = _.throttle(lazyLoad, 100);
-// window.addEventListener('resize', debouncedLazy);
-// window.addEventListener('scroll', throttleLazy);
+function showImg(img, images){
+  var i = 0;
+  var  next_btn = document.querySelector('.next');
+  var  prev_btn = document.querySelector('.previous');
+  next_btn.addEventListener('click', () => {
+    if (i < images.length -1) {
+      i += 1;
+      img.src = images[i];
+    }
+  });
+  prev_btn.addEventListener('click', () => {
+    if (i <= images.length && i > 0) {
+      i = i - 1;
+      img.src = images[i];
+    }
+  });
+  img.src = images[i];
+}
+function automaticSlider(img, images){
+  var i = 0;
+  setInterval(() => {
+    if (i < images.length -1) {
+      i += 1;
+      img.src = images[i];
+    }
+  }, 5000)
+}

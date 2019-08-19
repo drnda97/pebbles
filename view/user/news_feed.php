@@ -1,9 +1,12 @@
-<div class="news-wrapper">  
+<?php $events = $_SESSION['events']; ?>
+<div class="news_wrapper clearfix">
   <img src="../pebbles/11.jpg" alt="" class="news-cover">
-  <main>
-    <div class="card">
-    <img src="../pebbles/happy-hour.jpg" alt="">
-    <p>From monday to friday this week we are having happy hour from 5pm to 6pm, see you!</p>
-  </div>
+  <main id="newsFeedMain">
+    <?php foreach ($events as $event): ?>
+        <div class="card">
+          <img src="<?php echo $event['img_url']; ?>" alt="">
+          <p><?php echo $event['title']; ?></p>
+        </div>
+    <?php endforeach; ?>
   </main>
 </div>

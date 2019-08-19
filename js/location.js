@@ -1,12 +1,17 @@
 window.addEventListener('load', () => {
-  showImg();
+  var  img = document.querySelector('.slider_container img');
+  var images = [];
+  var getSrc = document.querySelectorAll('.location_slider');
+  getSrc.forEach(src => {
+    images.push(src.dataset.src);
+  });
+  showImg(img, images);
+  automaticSlider(img, images);
 });
-function showImg(){
+function showImg(img, images){
   var i = 0;
-  var images = ['../pebbles/1.jpg', '../pebbles/2.jpg', '../pebbles/3.jpg']
   var  next_btn = document.querySelector('.next');
   var  prev_btn = document.querySelector('.previous');
-  var  img = document.querySelector('.slider_container img');
   next_btn.addEventListener('click', () => {
     if (i < images.length -1) {
       i += 1;

@@ -21,3 +21,10 @@
 -- 	id_menu_item decimal(5,2) not null,
 -- 	sub_item varchar(100) not null
 -- );
+-- create table news_feed(
+--   id int auto_increment primary key,
+--   img_url varchar(500),
+--   title mediumtext
+-- );
+-- alter table news_feed
+-- add column id_option INT(11);
