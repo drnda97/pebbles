@@ -8,5 +8,7 @@ foreach (glob('../model/*') as $model_name) {
 }
 
 require_once('../db.php');
+$admin = new Admin();
+$_SESSION['nav'] = $admin->getNav();
 
 $router = new Router;

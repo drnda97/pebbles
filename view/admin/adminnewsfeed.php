@@ -1,5 +1,5 @@
 <h1>Create a event</h1>
-<form name="createEventForm" action="http://localhost/pebbles/admin/createEvent" method="post" enctype="multipart/form-data">
+<form name="createEventForm" action="/admin/createEvent" method="post" enctype="multipart/form-data">
   <div class="form-controll">
     <label for="eventImg">Please Choose Image for the Event</label>
     <input type="file" name="eventImg">

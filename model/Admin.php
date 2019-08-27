@@ -20,6 +20,18 @@ class Admin
     $res = $conn->query($query);
     return $res->fetch_assoc();
   }
+  // get navigation
+  public function getNav()
+  {
+    global $conn;
+    $query = 'select * from options';
+    $res = $conn->query($query);
+    $options = array();
+    while($option = $res->fetch_assoc()){
+        $options[] = $option;
+    }
+    return $options;
+  }
   // get product by name
   public function getOneProductByName($product)
   {
@@ -166,6 +178,61 @@ class Admin
     $title = mysqli_real_escape_string($conn, $title);
     $eventImageNewDestination = mysqli_real_escape_string($conn, $eventImageNewDestination);
     $query = 'insert into news_feed values(null, "'.$eventImageNewDestination.'", "'.$title.'")';
+    $res = $conn->query($query);
+    return $res;
+  }
+  public function deleteTextFromBase($id)
+  {
+    global $conn;
+    $query = 'delete from text where id = '.$id.'';
+    $res = $conn->query($query);
+    return $res;
+  }
+  public function getOneText($id)
+  {
+    global $conn;
+    $query = 'select * from text where id = '.$id.'';
+    $res = $conn->query($query);
+    return $res->fetch_assoc();
+  }
+  public function getAllOptions()
+  {
+    global $conn;
+    $query = 'select * from options';
+    $res = $conn->query($query);
+    $options = array();
+    while($option = $res->fetch_assoc()){
+      $options[] = $option;
+    }
+    return $options;
+  }
+  public function getOneOption($id)
+  {
+    global $conn;
+    $query = 'select * from options where id = '.$id.'';
+    $res = $conn->query($query);
+    return $res->fetch_assoc();
+  }
+  public function updateOptioninBase($option_name, $id)
+  {
+    global $conn;
+    $option_name = mysqli_real_escape_string($conn, $option_name);
+    $query = 'update options set option_name = "'.$option_name.'" where id =  '.$id.'';
+    $res = $conn->query($query);
+    return $res;
+  }
+  public function deleteOptionFromNav($id)
+  {
+    global $conn;
+    $query = 'delete from options where id = '.$id.'';
+    $res = $conn->query($query);
+    return $res;
+  }
+  public function updateTextInBase($updateText, $id)
+  {
+    global $conn;
+    $updateText = mysqli_real_escape_string($conn, $updateText);
+    $query = 'update text set text = "'.$updateText.'" where id = '.$id.'';
     $res = $conn->query($query);
     return $res;
   }

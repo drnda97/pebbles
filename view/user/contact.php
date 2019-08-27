@@ -1,9 +1,19 @@
+<?php $texts = $_SESSION['textContact']; ?>
 <div class="contact">
-  <h2 class="contact_h2">Contact us</h2>
-  <p>Send us a message and we’ll get back to you as soon as possible.</p>
-  <p>You can also reach us by phone at <a href="tel:+356 2356 1000">+356 2356 1000.</a></p>
-  <p>Looking forward to hearing from you!</p>
-  <form action="#" method="post">
+  <?php foreach ($texts as $text): ?>
+    <?php if ($text['tag_name'] === 'headline'): ?>
+      <h2 class="contact_h2"><?php echo $text['text']; ?></h2>
+    <?php endif; ?>
+  <?php endforeach; ?>
+  <?php foreach ($texts as $text): ?>
+    <?php if ($text['tag_name'] === 'p'): ?>
+      <p><?php echo $text['text']; ?></p>
+    <?php endif; ?>
+    <?php if ($text['tag_name'] === 'a'): ?>
+      <p><a href="tel:<?php echo $text['text']; ?>"><?php echo $text['text']; ?>.</a> </p>
+    <?php endif; ?>
+  <?php endforeach; ?>
+  <form name="contactForm" action="/user/mailMe" method="post">
     <div class="form-control contactn">
       <input type="text" name="name" placeholder="Name">
     </div>
@@ -16,7 +26,7 @@
     <div class="form-control contact">
       <textarea name="msg" rows="4" cols="76" placeholder="Message"></textarea>
     </div>
-    <button type="button" name="submit">Send</button>
+    <button type="button" name="mailSubmit">Send</button>
   </form>
 </div>
 <script type="text/javascript" src="../js/contact.js"></script>

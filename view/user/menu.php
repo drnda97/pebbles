@@ -1,6 +1,6 @@
 <?php $products = $_SESSION['products']; ?>
 <?php $items = $_SESSION['items']; ?>
-<?php $images = $_SESSION['images']; ?>
+<?php $images = $_SESSION['menuImages']; ?>
 <div class="slider_container">
   <img name="slider" alt="prva slika slajda">
   <button type="button" name="next" class="next">&#10095;</button>

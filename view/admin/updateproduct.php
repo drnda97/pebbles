@@ -1,6 +1,6 @@
 <?php $product = $_SESSION['oneProduct'] ?>
 <h1>Insert new values for Product</h1>
-<form name ="updateproduct" action="http://localhost/pebbles/admin/updateProductInMenu?id=<?php echo $product['id'];; ?>" method="post">
+<form name ="updateproduct" action="<?php echo WEBROOT; ?>/admin/updateProductInMenu?id=<?php echo $product['id'];; ?>" method="post">
     <div class="form-controll">
       <label for="product">product</label>
       <input type="text" name="product" value="<?php echo $product['product']; ?>">

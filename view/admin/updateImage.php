@@ -1,6 +1,6 @@
 <?php $image = $_SESSION['oneImg']; ?>
 <h1>Insert new image</h1>
-<form name="updateImage" action="http://localhost/pebbles/admin/updatingImage?id=<?php echo $image['id']; ?>" method="post" enctype="multipart/form-data">
+<form name="updateImage" action="<?php echo WEBROOT; ?>/admin/updatingImage?id=<?php echo $image['id']; ?>" method="post" enctype="multipart/form-data">
   <input type="file" name="update_image">
   <input type="submit" name="submit" value="Submit">
 </form>

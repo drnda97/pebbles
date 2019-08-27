@@ -17,13 +17,18 @@ class AdminController
   // display start page
   public function adminprimarypage()
   {
-    $images = new Admin();
-    $_SESSION['images'] = $images->getImages();
+    $admin = new Admin();
+    $text = new Text();
+    $_SESSION['startpageText'] = $text->getText('startpage');
+    $_SESSION['images'] = $admin->getImages();
+    $_SESSION['options'] = $admin->getAllOptions();
     View::adminload('admin','adminstartpage');
   }
   // display hours and location page
   public function adminhoursandlocation()
   {
+    $text = new Text();
+    $_SESSION['locationText'] = $text->getText('location');
     View::adminload('admin','adminlocation');
   }
   // display menu page
@@ -50,6 +55,8 @@ class AdminController
   // display contact page
   public function admincontact()
   {
+    $text = new Text();
+    $_SESSION['contactText'] = $text->getText('contact');
     View::adminload('admin','admincontact');
   }
   // display news feed page
@@ -145,6 +152,42 @@ class AdminController
     $admin = new Admin();
     $_SESSION['oneItem'] = $admin->getOneItemById($id);
     View::adminload('admin','updateItem');
+  }
+  public function Text()
+  {
+    if (isset($_GET['id'])) {
+      $id = $_GET['id'];
+      $admin = new Admin();
+      $_SESSION['oneText'] = $admin->getOneText($id);
+    }
+    View::adminload('admin','updateText');
+  }
+  public function updateText()
+  {
+    if (!isset($_POST['updateText'])) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }
+    $id = $_GET['id'];
+    $updateText = trim($_POST['updateText']);
+    $admin = new Admin();
+    if (!$admin->updateTextInBase($updateText, $id)) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }else{
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+  }
+  public function deleteText()
+  {
+    if (!isset($_GET['id'])) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }
+    $id = $_GET['id'];
+    $admin = new Admin();
+    if (!$admin->deleteTextFromBase($id)) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }else{
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
   }
   public function updateItemInMenu()
   {
@@ -246,6 +289,43 @@ class AdminController
       header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
     }else{
       header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+  }
+  public function updateOption()
+  {
+    if (!isset($_GET['id'])) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+    $id = $_GET['id'];
+    $admin = new Admin();
+    $_SESSION['oneOption'] = $admin->getOneOption($id);
+    View::adminload('admin', 'updateOption');
+  }
+  public function updateOptionName()
+  {
+    if (!isset($_POST['updateBtn'])) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }
+    $id = $_GET['id'];
+    $option_name = trim($_POST['update_option']);
+    $admin = new Admin();
+    if (!$admin->updateOptioninBase($option_name, $id)) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }else{
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+  }
+  public function deleteOption()
+  {
+    if (!isset($_GET['id'])) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+    $id = $_GET['id'];
+    $admin = new Admin();
+    if (!$admin->deleteOptionFromNav($id)) {
+      header('Location: ' . $_SERVER['HTTP_REFERER'] . $this->err);
+    }else{
+      header('Location: http://www.pebbles.com/admin/adminprimarypage');
     }
   }
 }

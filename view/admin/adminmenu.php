@@ -12,15 +12,15 @@
     <?php foreach ($items as $item): ?>
       <tr>
         <td><?php echo $item['item_in_menu']; ?></td>
-        <td><a href="http://localhost/pebbles/admin/deleteItemInMenu?id=<?php echo $item['id']; ?>">delete</a></td>
-        <td><a href="http://localhost/pebbles/admin/updateItem?id=<?php echo $item['id']; ?>" class="updateItem">update</a></td>
+        <td><a href="/admin/deleteItemInMenu?id=<?php echo $item['id']; ?>">delete</a></td>
+        <td><a href="/admin/updateItem?id=<?php echo $item['id']; ?>" class="updateItem">update</a></td>
       </tr>
     <?php endforeach; ?>
     <tr>
       <td colspan="3"><a href="#" class="item_in_menu_btn">Add new +</a></td>
     </tr>
     <tr class="item secret">
-      <form name="newItemForm" action="http://localhost/pebbles/admin/insertNewItem" method="post">
+      <form name="newItemForm" action="/admin/insertNewItem" method="post">
         <td><legend>Enter Item Name</legend></td>
         <td><input type="text" name="item_in_menu"></td>
         <td><input type="button" name="itemBtn" value="Submit"></td>
@@ -46,15 +46,15 @@
           <td><?php echo $product['description']; ?></td>
           <td><?php echo $product['price']; ?></td>
           <td><?php echo $product['amount']; ?></td>
-          <td><a href="http://localhost/pebbles/admin/deleteProductInMenu?id=<?php echo $product['id']; ?>">delete</a></td>
-          <td><a href="http://localhost/pebbles/admin/updateproduct?id=<?php echo $product['id']; ?>">update</a></td>
+          <td><a href="/admin/deleteProductInMenu?id=<?php echo $product['id']; ?>">delete</a></td>
+          <td><a href="/admin/updateproduct?id=<?php echo $product['id']; ?>">update</a></td>
         </tr>
       <?php endforeach; ?>
       <tr>
         <td colspan="6"><a href="#" class="addNewBtn">Add new +</a></td>
       </tr>
       <tr class="product secret">
-        <form name="addNewForm" action="http://localhost/pebbles/admin/insertNewProduct" method="post">
+        <form name="addNewForm" action="/admin/insertNewProduct" method="post">
           <td><input type="text" name="product" placeholder="Enter product name"></td>
           <td><input type="number" name="price" placeholder="Enter price"></td>
           <td><input type="text" name="description" placeholder="Enter description"></td>

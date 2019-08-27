@@ -32,6 +32,7 @@ nav ul li a{
 }
 table{
   width: 100%;
+  margin-bottom: 50px;
 }
 .secret{
   display: none;

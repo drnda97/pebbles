@@ -35,4 +35,15 @@ class Image
     }
       return $images;
   }
+  public function getFeedImage()
+  {
+    global $conn;
+    $query = 'select * from images where id_option = 4';
+    $res = $conn->query($query);
+    $images = array();
+    while($image = $res->fetch_assoc()){
+      $images[] = $image;
+    }
+      return $images;
+  }
 }

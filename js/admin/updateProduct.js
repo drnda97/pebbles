@@ -3,5 +3,5 @@ window.addEventListener('load', (e) => {
   var inputs = [].slice.call(form.elements);
   inputs.length = 2;
   var submit = document.querySelector('[name="button"]');
-  checkInputBtn(form, inputs, submit);
+  checkInput(form, inputs, submit);
 });
