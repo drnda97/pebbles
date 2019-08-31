@@ -12,6 +12,9 @@ body{
   padding: 0;
   background-color: #f4f5f5;
 }
+.secret{
+  display: none !important;
+}
 /* ======================navbar========================================== */
 .nav-wrapper{
   width: 1200px;
@@ -28,6 +31,30 @@ nav{
   transition: all .5s linear;
   z-index: 999;
 }
+.hamburger{
+  width: 50%;
+  float: right;
+  cursor: pointer;
+}
+.close{
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.close img{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+#hamburger_icon{
+  display: block;
+  float: right;
+  padding: 5px;
+}
 .logo{
   transition: all .2s linear;
   display: block;
@@ -41,15 +68,17 @@ nav{
 nav ul{
   list-style: none;
   padding: 0;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   padding-bottom: 45px;
+  position: relative;
+  z-index: 1000;
 }
 nav ul li{
   width: 17%;
   float: left;
   text-align: center;
-  margin: 0 25px;
+  margin: 0 15px;
   padding-top: 10px;
   color: #051f34;
 }
@@ -59,12 +88,6 @@ nav ul li a{
   padding-top: 5px;
   text-decoration: none;
   color: #051f34;
-}
-.strech{
-  content: '';
-  display: block;
-  height: 100px;
-  clear: both;
 }
 /* ======================starpage========================================== */
 .start-images div{
@@ -82,6 +105,7 @@ nav ul li a{
   font-family: 'Poller One', sans-serif;
   color: #051f34;
   font-size: 32px;
+  clear: both;
 }
 .start-images div img{
   display: block;
@@ -91,14 +115,21 @@ nav ul li a{
   opacity: 1;
 }
 .parallax{
-  background-image:  url('../../../pebbles/1.jpg');
+  position: relative;
   height: 600px;
+  z-index: 1;
+  background-image:  url('../../../pebbles/1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  z-index: 1;
+   -webkit-background-size: 100%;
+   -o-background-size: 100%;
+   -moz-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .parallax img{
   position: absolute;
@@ -257,9 +288,8 @@ h1{
 }
 .slider_container img{
   display: block;
-  margin-top: -400px;
+  margin-top: -200px;
   width: 100%;
-  height: auto;
 }
 .previous{
     position: absolute;

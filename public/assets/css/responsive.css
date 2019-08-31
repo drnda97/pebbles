@@ -1,0 +1,333 @@
+@media screen and (min-width: 1025px) and (max-width: 1216px){
+  /* ---------------------------------nav------------------------------------------------------------------- */
+  nav ul{
+    padding: 0;
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+  }
+  nav ul li{
+    width: 15%;
+    float: left;
+    margin: 0 15px;
+  }
+  /* ---------------------------------startpage------------------------------------------------------------------- */
+  .start-images div{
+    width: 48% !important;
+  }
+  /* ---------------------------------Menu------------------------------------------------------------------- */
+  .first_img,
+  .second_img,
+  .third_img{
+    display: none;
+  }
+  /* ---------------------------------contact------------------------------------------------------------------- */
+  .contact input{
+    width: 50%;
+  }
+  .contact textarea{
+    width: 50%;
+  }
+  #newsFeedMain{
+    width: 80%;
+  }
+  .card{
+    width:65%;
+  }
+  #newsFeedMain div:nth-child(odd){
+    float: left;
+    margin-left: 50px;
+    float: none !important;
+  }
+  #newsFeedMain div:nth-child(even){
+    float: right;
+    margin-right: 40px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1024px){
+  /* ---------------------------------nav------------------------------------------------------------------- */
+  .logo{
+    width: 67%;
+    margin-right: 0 !important;
+  }
+  .logo img{
+    float: left;
+    margin: 0;
+    padding: 15px;
+  }
+  nav ul{
+    padding: 0;
+    width: 50%;
+    clear: both;
+    position: relative;
+  }
+  nav ul li{
+    width: 15%;
+    float: left;
+    margin: 0 15px;
+  }
+  /* ---------------------------------startpage------------------------------------------------------------------- */
+  .start-images div{
+    width: 48% !important;
+  }
+  /* ---------------------------------Menu------------------------------------------------------------------- */
+  .first_img,
+  .second_img,
+  .third_img{
+    display: none;
+  }
+  /* ---------------------------------contact------------------------------------------------------------------- */
+  .contact input{
+    width: 60%;
+  }
+  .contact textarea{
+    width: 60%;
+  }
+  #newsFeedMain{
+    width: 80%;
+  }
+  .card{
+    width: 70%;
+  }
+  #newsFeedMain div:nth-child(odd){
+    float: left;
+    /* margin: 0 auto; */
+    margin-left: 50px;
+    float: none !important;
+  }
+  #newsFeedMain div:nth-child(even){
+    float: right;
+    margin-right: 40px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 544px) and (max-width: 720px){
+  /* ---------------------------------nav------------------------------------------------------------------- */
+    .logo{
+      margin: 0;
+      float: left;
+      width: 50%;
+    }
+    .logo img{
+      margin: 0 !important;
+      width: 100px;
+      padding: 5px;
+    }
+    nav ul{
+      width: 100%;
+      height: 100vh;
+      position: absolute !important;
+      top: -200vh;
+      left: 0;
+      background-color: #f4f5f5;
+      padding-top: 20%;
+    }
+    nav ul li{
+      width: 100%;
+      font-size: 20px;
+      line-height: 2;
+      margin: 15px auto;
+    }
+    .hamburger{
+      display: block !important;
+    }
+    .close{
+      display: block !important;
+    }
+  /* ---------------------------------startpage------------------------------------------------------------------- */
+  .start-images div{
+    width: 47% !important;
+  }
+  /* ---------------------------------slider------------------------------------------------------------------- */
+  .slider_container img{
+    margin-top: 120px;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  /* ---------------------------------contact------------------------------------------------------------------- */
+  .contact input{
+    width: 80%;
+  }
+  .contact textarea{
+    width: 80%;
+  }
+  /* ---------------------------------Menu------------------------------------------------------------------- */
+  .first_img,
+  .second_img,
+  .third_img{
+    display: none;
+  }
+  /* ---------------------------------news------------------------------------------------------------------- */
+  #newsFeedMain{
+    width: 80%;
+  }
+  .card{
+    width: 90%;
+  }
+  #newsFeedMain div:nth-child(odd){
+    margin: 0 auto;
+    float: none !important;
+  }
+  #newsFeedMain div:nth-child(even){
+    float: none;
+    margin: 0 auto;
+  }
+
+}
+@media screen and (min-width: 321px) and (max-width: 543px){
+  /* ---------------------------------nav------------------------------------------------------------------- */
+  .logo{
+    margin: 0;
+    float: left;
+    width: 50%;
+  }
+  .logo img{
+    margin: 0 !important;
+    width: 100px;
+    padding: 5px;
+  }
+  nav ul{
+    width: 100%;
+    height: 100vh;
+    position: absolute !important;
+    top: -200vh;
+    left: 0;
+    background-color: #f4f5f5;
+    padding-top: 20%;
+    z-index: 10000000;
+  }
+  nav ul li{
+    width: 100%;
+    font-size: 20px;
+    line-height: 2;
+    margin: 15px auto;
+  }
+  .hamburger{
+    display: block !important;
+  }
+  .close{
+    display: block !important;
+  }
+  /* ---------------------------------slider------------------------------------------------------------------- */
+  .slider_container img{
+    margin-top: 120px;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  /* ---------------------------------startpage------------------------------------------------------------------- */
+  .start-images div{
+    display: block;
+    float: none;
+    width: 95% !important;
+    height: 300px;
+    margin: 5px auto;
+  }
+  .parallax h1{
+    font-size: 100px;
+  }
+  .menu-btn {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+  /* ---------------------------------Menu------------------------------------------------------------------- */
+  .first_img,
+  .second_img,
+  .third_img{
+    display: none;
+  }
+  /* ---------------------------------contact------------------------------------------------------------------- */
+  .contact input{
+    width: 80%;
+  }
+  .contact textarea{
+    width: 80%;
+  }
+  /* ---------------------------------news------------------------------------------------------------------- */
+  #newsFeedMain{
+    width: 100%;
+  }
+  .card{
+    width: 90%;
+    box-shadow: 8px 5px 5px grey;
+  }
+  #newsFeedMain div:nth-child(odd){
+    margin: 0 auto;
+    float: none !important;
+  }
+  #newsFeedMain div:nth-child(even){
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px){
+  /* ---------------------------------nav------------------------------------------------------------------- */
+    .logo{
+      margin: 0;
+      float: left;
+      width: 50%;
+    }
+    .logo img{
+      margin: 0 !important;
+      width: 100px;
+      padding: 5px;
+    }
+    nav ul{
+      /* display: none; */
+      width: 100%;
+      height: 100vh;
+      position: absolute !important;
+      top: -200vh;
+      left: 0;
+      background-color: #f4f5f5;
+      padding-top: 20%;
+    }
+    nav ul li{
+      width: 100%;
+      font-size: 20px;
+      line-height: 2;
+      margin: 15px auto;
+    }
+    .hamburger{
+      display: block !important;
+    }
+    .close{
+      display: block !important;
+    }
+  /* ---------------------------------startpage------------------------------------------------------------------- */
+  .start-images div{
+    width: 99% !important;
+  }
+  /* ---------------------------------Menu------------------------------------------------------------------- */
+  .first_img,
+  .second_img,
+  .third_img{
+    display: none;
+  }
+  /* ---------------------------------contact------------------------------------------------------------------- */
+  .contact input{
+    width: 80%;
+  }
+  .contact textarea{
+    width: 80%;
+  }
+  /* ---------------------------------news------------------------------------------------------------------- */
+  #newsFeedMain{
+    width: 100%;
+  }
+  .card{
+    width: 90%;
+    box-shadow: 8px 5px 5px grey;
+  }
+  #newsFeedMain div:nth-child(odd){
+    margin: 0 auto;
+    float: none !important;
+  }
+  #newsFeedMain div:nth-child(even){
+    float: none;
+    margin: 0 auto;
+  }
+}

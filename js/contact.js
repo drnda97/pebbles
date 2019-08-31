@@ -1,12 +1,14 @@
-window.addEventListener('scroll', () => {
-  var strech = document.querySelector('.contact');
-  if (window.scrollY <= 100) {
-    strech.style.marginTop = '230px';
-  }
-  if (window.scrollY == 0) {
-    strech.style.marginTop = '0px';
-  }
-});
+if (window.matchMedia("(min-width: 721px)").matches) {
+  window.addEventListener('scroll', () => {
+    var strech = document.querySelector('.contact');
+    if (window.scrollY <= 100) {
+      strech.style.marginTop = '230px';
+    }
+    if (window.scrollY == 0) {
+      strech.style.marginTop = '0px';
+    }
+  });
+}
 window.addEventListener('load', (e) => {
   var form = document.querySelector('[name="contactForm"]');
   var inputs = [].slice.call(form.elements);
